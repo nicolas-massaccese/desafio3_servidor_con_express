@@ -39,9 +39,8 @@ function showDataJason(showData){
 
 
 function showRandomDataJason(data){
-    let random = data[Math.floor(Math.random() * data.length)];
-
     app.get('/productRandom', (req, res) => {
+        let random = data[Math.floor(Math.random() * data.length)];
         res.send(`<p>${random.id}</p>
         <p>${random.title}</p>
         <p>${random.price}</p>
